@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      Dashboard
+    </title>
+    <script type="text/javascript">
+    ajaxurl = 'http://www.taxweb.com.br/site/wp-admin/admin-ajax.php';
+    pagenow = 'dashboard';
+    </script>
+    <link rel="stylesheet" href="./assets/dashboard.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./assets/colors-fresh.css" type="text/css" media="all" />
+    
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='/assets/ie.css?ver=20110711' type='text/css' media='all' />
+<![endif]-->
+
+
+  <script type="text/javascript" src="./assets/jquery-1.6.2.js"></script>
+  <script type="text/javascript" src="./assets/jquery-ui-1.8.16.custom.js"></script>
+  <script type="text/javascript" src="./assets/dash_util.js"></script>
+  <script type="text/javascript" src="./assets/postboxes.js"></script>
+  <script type="text/javascript" src="./assets/jquery-query.js"></script>
+  
+  </head>
+  <body class="wp-admin js admin-color-fresh" style="cursor: auto;">
+    <div id="wpwrap">
+      <div id="wpcontent">
+        <div id="wphead">
+          <img id="header-logo" src="./assets/blank.gif" alt="" width="16" height="16" />
+          <h1 id="site-heading">
+            <a href="#" title="Visit Site"><span id="site-title">TaxWeb</span></a>
+          </h1>
+          <div id="wphead-info">
+            <div id="user_info">
+              <p class="hide-if-js">
+                Howdy, jose.neto | <a href="#" title="Edit your profile">Your Profile</a> | <a href="#" title="Log Out">Log Out</a>
+              </p>
+              <div class="hide-if-no-js">
+                <p>
+                  Howdy, jose.neto
+                </p>
+                <div id="user_info_arrow"></div>
+                <div id="user_info_links_wrap">
+                  <div id="user_info_links">
+                    <ul>
+                      <li>
+                        <a href="#" title="Edit your profile">Your Profile</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Log Out">Log Out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="wpbody">
+          <div id="wpbody-content" style="overflow-x: hidden; overflow-y: hidden;">
+            <div id="screen-meta">
+              <div id="screen-options-wrap" class="hidden">
+                <form id="adv-settings" action="" method="post">
+                  <h5>
+                    Show on screen
+                  </h5>
+                  <div class="metabox-prefs">
+                    <label for="dashboard_portlet_1-hide">
+                      <input class="hide-postbox-tog" name="dashboard_portlet_1-hide" type="checkbox" id="dashboard_portlet_1-hide" value="dashboard_portlet_1" checked="checked" />portlet 1 
+                      <span class="postbox-title-action">
+                      <a href="#dashboard_portlet_1" class="edit-box open-box">Configure</a>
+                      </span>
+                    </label> 
+                    <label for="dashboard_portlet_2-hide">
+                      <input class="hide-postbox-tog" name="dashboard_portlet_2-hide" type="checkbox" id="dashboard_portlet_2-hide" value="dashboard_portlet_2" checked="checked" />portlet 2 
+                      <span class="postbox-title-action">
+                      <a href="#dashboard_portlet_2" class="edit-box open-box">Configure</a>
+                      </span>
+                    </label>
+                    <br class="clear" />
+                  </div>
+                  <h5>
+                    Screen Layout
+                  </h5>
+                  <div class="columns-prefs">
+                    Number of Columns: 
+                    <label><input type="radio" name="screen_columns" value="1" /> 1</label> 
+                    <label><input type="radio" name="screen_columns" value="2" checked="checked" /> 2</label> 
+                    <label><input type="radio" name="screen_columns" value="3" /> 3</label> 
+                    <label><input type="radio" name="screen_columns" value="4" /> 4</label>
+                  </div>
+                  <div>
+                    <input type="hidden" id="screenoptionnonce" name="screenoptionnonce" value="9206fb946b" />
+                  </div>
+                </form>
+              </div>
+              <div id="contextual-help-wrap" class="hidden">
+                <div class="metabox-prefs">
+                  <p>
+                    Texto da Ajuda.
+                  </p>
+                </div>
+              </div>
+              <div id="screen-meta-links">
+                <div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+                  <a href="#contextual-help" id="contextual-help-link" class="show-settings" name="contextual-help-link">Help</a>
+                </div>
+                <div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+                  <a href="#screen-options" id="show-settings-link" class="show-settings" name="show-settings-link">Screen Options</a>
+                </div>
+              </div>
+            </div>
+            <div class="wrap">
+              <h2>
+              &nbsp;Dashboard
+              </h2>
+              <div id="dashboard-widgets-wrap">
+                <div id="dashboard-widgets" class="metabox-holder">
+                  <div class="postbox-container" style="width:49%;">
+                    <div id="normal-sortables" class="meta-box-sortables ui-sortable">
+                      <div id="dashboard_portlet_1" class="postbox" style="display: block;">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>Portlet 1</span>
+                        </h3>
+                        <div class="inside">
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="postbox-container" style="width:49%;">
+                    <div id="side-sortables" class="meta-box-sortables ui-sortable">
+                      <div id="dashboard_portlet_2" class="postbox" style="display: block;">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>Portlet 2</span>
+                        </h3>
+                        <div class="inside">
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                          <p>Conteúdo do Portlet</p>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="postbox-container" style="display:none;width:49%;">
+                    <div id="column3-sortables" class="meta-box-sortables ui-sortable" style=""></div>
+                  </div>
+                  <div class="postbox-container" style="display:none;width:49%;">
+                    <div id="column4-sortables" class="meta-box-sortables ui-sortable" style=""></div>
+                  </div>
+                </div>
+                <form style="display:none" method="get" action="">
+                  <p>
+                    <input type="hidden" id="closedpostboxesnonce" name="closedpostboxesnonce" value="5250f0fbfc" />
+                    <input type="hidden" id="meta-box-order-nonce" name="meta-box-order-nonce" value="7c7e2d5e8c" />
+                  </p>
+                </form>
+                <div class="clear"></div>
+              </div><!-- dashboard-widgets-wrap -->
+            </div><!-- wrap -->
+            <div class="clear"></div>
+          </div><!-- wpbody-content -->
+          <div class="clear"></div>
+        </div><!-- wpbody -->
+        <div class="clear"></div>
+      </div><!-- wpcontent -->
+      
+      <div class="clear"></div>
+    </div><!-- wpwrap -->
+  </body>
+</html>

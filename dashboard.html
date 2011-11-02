@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      Dashboard
+    </title>
+    <script type="text/javascript">
+//<![CDATA[
+    addLoadEvent = function(func) {
+        jQuery(document).ready(func);
+    };
+    ajaxurl = 'http://www.taxweb.com.br/site/wp-admin/admin-ajax.php';
+    pagenow = 'dashboard';
+    //]]>
+    </script>
+    <link rel="stylesheet" href="./assets/dashboard.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./assets/colors-fresh.css" type="text/css" media="all" />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='http://www.taxweb.com.br/site/wp-admin/css/ie.css?ver=20110711' type='text/css' media='all' />
+<![endif]-->
+
+
+  <script type="text/javascript" src="./assets/jquery-1.6.2.js">
+  </script>
+  </head>
+  <body class="wp-admin js index-php branch-3-2 version-3-2-1 admin-color-fresh" style="cursor: auto;">
+    <div id="wpwrap">
+      <div id="wpcontent">
+        <div id="wphead">
+          <img id="header-logo" src="./assets/blank.gif" alt="" width="16" height="16" />
+          <h1 id="site-heading">
+            <a href="#" title="Visit Site"><span id="site-title">TaxWeb</span></a>
+          </h1>
+          <div id="wphead-info">
+            <div id="user_info">
+              <p class="hide-if-js">
+                Howdy, jose.neto | <a href="#" title="Edit your profile">Your Profile</a> | <a href="#" title="Log Out">Log Out</a>
+              </p>
+              <div class="hide-if-no-js">
+                <p>
+                  Howdy, jose.neto
+                </p>
+                <div id="user_info_arrow"></div>
+                <div id="user_info_links_wrap">
+                  <div id="user_info_links">
+                    <ul>
+                      <li>
+                        <a href="#" title="Edit your profile">Your Profile</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Log Out">Log Out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="wpbody">
+          <div id="wpbody-content" style="overflow-x: hidden; overflow-y: hidden;">
+            <div id="screen-meta">
+              <div id="screen-options-wrap" class="hidden">
+                <form id="adv-settings" action="" method="post">
+                  <h5>
+                    Show on screen
+                  </h5>
+                  <div class="metabox-prefs">
+                    <label for="dashboard_right_now-hide"><input class="hide-postbox-tog" name="dashboard_right_now-hide" type="checkbox" id="dashboard_right_now-hide" value="dashboard_right_now" checked="checked" />Right Now</label> <label for="dashboard_recent_comments-hide"><input class="hide-postbox-tog" name="dashboard_recent_comments-hide" type="checkbox" id="dashboard_recent_comments-hide" value="dashboard_recent_comments" checked="checked" />Recent Comments <span class="postbox-title-action"><a href="http://www.taxweb.com.br/site/wp-admin/?edit=dashboard_recent_comments#dashboard_recent_comments" class="edit-box open-box">Configure</a></span></label> <label for="dashboard_incoming_links-hide"><input class="hide-postbox-tog" name="dashboard_incoming_links-hide" type="checkbox" id="dashboard_incoming_links-hide" value="dashboard_incoming_links" checked="checked" />Incoming Links <span class="postbox-title-action"><a href="http://www.taxweb.com.br/site/wp-admin/?edit=dashboard_incoming_links#dashboard_incoming_links" class="edit-box open-box">Configure</a></span></label> <label for="dashboard_plugins-hide"><input class="hide-postbox-tog" name="dashboard_plugins-hide" type="checkbox" id="dashboard_plugins-hide" value="dashboard_plugins" checked="checked" />Plugins</label> <label for="dashboard_quick_press-hide"><input class="hide-postbox-tog" name="dashboard_quick_press-hide" type="checkbox" id="dashboard_quick_press-hide" value="dashboard_quick_press" checked="checked" />QuickPress</label> <label for="dashboard_recent_drafts-hide"><input class="hide-postbox-tog" name="dashboard_recent_drafts-hide" type="checkbox" id="dashboard_recent_drafts-hide" value="dashboard_recent_drafts" checked="checked" />Recent Drafts</label> <label for="dashboard_primary-hide"><input class="hide-postbox-tog" name="dashboard_primary-hide" type="checkbox" id="dashboard_primary-hide" value="dashboard_primary" checked="checked" />WordPress Blog <span class="postbox-title-action"><a href="http://www.taxweb.com.br/site/wp-admin/?edit=dashboard_primary#dashboard_primary" class="edit-box open-box">Configure</a></span></label> <label for="dashboard_secondary-hide"><input class="hide-postbox-tog" name="dashboard_secondary-hide" type="checkbox" id="dashboard_secondary-hide" value="dashboard_secondary" checked="checked" />Other WordPress News <span class="postbox-title-action"><a href="http://www.taxweb.com.br/site/wp-admin/?edit=dashboard_secondary#dashboard_secondary" class="edit-box open-box">Configure</a></span></label><br class="clear" />
+                  </div>
+                  <h5>
+                    Screen Layout
+                  </h5>
+                  <div class="columns-prefs">
+                    Number of Columns: <label><input type="radio" name="screen_columns" value="1" /> 1</label> <label><input type="radio" name="screen_columns" value="2" checked="checked" /> 2</label> <label><input type="radio" name="screen_columns" value="3" /> 3</label> <label><input type="radio" name="screen_columns" value="4" /> 4</label>
+                  </div>
+                  <div>
+                    <input type="hidden" id="screenoptionnonce" name="screenoptionnonce" value="9206fb946b" />
+                  </div>
+                </form>
+              </div>
+              <div id="contextual-help-wrap" class="hidden">
+                <div class="metabox-prefs">
+                  <p>
+                    Texto da Ajuda.
+                  </p>
+                </div>
+              </div>
+              <div id="screen-meta-links">
+                <div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+                  <a href="#contextual-help" id="contextual-help-link" class="show-settings" name="contextual-help-link">Help</a>
+                </div>
+                <div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+                  <a href="#screen-options" id="show-settings-link" class="show-settings" name="show-settings-link">Screen Options</a>
+                </div>
+              </div>
+            </div>
+            <div class="wrap">
+              <div id="icon-index" class="icon32">
+                <br />
+              </div>
+              <h2>
+                Dashboard
+              </h2>
+              <div id="dashboard-widgets-wrap">
+                <div id="dashboard-widgets" class="metabox-holder">
+                  <div class="postbox-container" style="width:49%;">
+                    <div id="normal-sortables" class="meta-box-sortables ui-sortable">
+                      <div id="dashboard_right_now" class="postbox" style="display: block;">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>Right Now</span>
+                        </h3>
+                        <div class="inside">
+                          <div class="table table_content">
+                            <p class="sub">
+                              Content
+                            </p>
+                            <table>
+                              <tbody>
+                                <tr class="first">
+                                  <td class="first b b-posts">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit.php">29</a>
+                                  </td>
+                                  <td class="t posts">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit.php">Posts</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="first b b_pages">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit.php?post_type=page">6</a>
+                                  </td>
+                                  <td class="t pages">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit.php?post_type=page">Pages</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="first b b-cats">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit-tags.php?taxonomy=category">1</a>
+                                  </td>
+                                  <td class="t cats">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit-tags.php?taxonomy=category">Category</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="first b b-tags">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit-tags.php">0</a>
+                                  </td>
+                                  <td class="t tags">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit-tags.php">Tags</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="table table_discussion">
+                            <p class="sub">
+                              Discussion
+                            </p>
+                            <table>
+                              <tbody>
+                                <tr class="first">
+                                  <td class="b b-comments">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit-comments.php"><span class="total-count">1</span></a>
+                                  </td>
+                                  <td class="last t comments">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit-comments.php">Comment</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="b b_approved">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit-comments.php?comment_status=approved"><span class="approved-count">1</span></a>
+                                  </td>
+                                  <td class="last t">
+                                    <a class="approved" href="http://www.taxweb.com.br/site/wp-admin/edit-comments.php?comment_status=approved">Approved</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="b b-waiting">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit-comments.php?comment_status=moderated"><span class="pending-count">0</span></a>
+                                  </td>
+                                  <td class="last t">
+                                    <a class="waiting" href="http://www.taxweb.com.br/site/wp-admin/edit-comments.php?comment_status=moderated">Pending</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="b b-spam">
+                                    <a href="http://www.taxweb.com.br/site/wp-admin/edit-comments.php?comment_status=spam"><span class="spam-count">0</span></a>
+                                  </td>
+                                  <td class="last t">
+                                    <a class="spam" href="http://www.taxweb.com.br/site/wp-admin/edit-comments.php?comment_status=spam">Spam</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="versions">
+                            <p>
+                              Theme <span class="b"><a href="http://www.taxweb.com.br/site/wp-admin/themes.php">Pressthor</a></span> with <span class="b"><a href="http://www.taxweb.com.br/site/wp-admin/widgets.php">1 Widget</a></span>
+                            </p><span id="wp-version-message">You are using <span class="b">WordPress 3.2.1</span>.</span><br class="clear" />
+                          </div>
+                        </div>
+                      </div>
+                      <div id="dashboard_incoming_links" class="postbox">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>Incoming Links <span class="postbox-title-action"><a href="http://www.taxweb.com.br/site/wp-admin/?edit=dashboard_incoming_links#dashboard_incoming_links" class="edit-box open-box">Configure</a></span></span>
+                        </h3>
+                        <div class="inside" style="">
+                          <p>
+                            This dashboard widget queries <a href="http://blogsearch.google.com/">Google Blog Search</a> so that when another blog links to your site it will show up here. It has found no incoming links… yet. It’s okay — there is no rush.
+                          </p>
+                        </div>
+                      </div>
+                      <div id="dashboard_plugins" class="postbox">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>Plugins</span>
+                        </h3>
+                        <div class="inside" style="">
+                          <h4>
+                            Most Popular
+                          </h4>
+                          <h5>
+                            <a href="http://wordpress.org/extend/plugins/1-flash-gallery/">1 Flash Gallery</a>
+                          </h5>&nbsp;<span>(<a href="http://www.taxweb.com.br/site/wp-admin/plugin-install.php?tab=plugin-information&amp;plugin=1-flash-gallery&amp;_wpnonce=54f0564ec2&amp;TB_iframe=true&amp;width=600&amp;height=800" class="thickbox" title="1 Flash Gallery">Install</a>)</span>
+                          <p>
+                            1 Flash Gallery is a Photo Gallery with slideshow function, many skins and powerfull admin to manage your image gallery without any program skills
+                          </p>
+                          <h4>
+                            Newest Plugins
+                          </h4>
+                          <h5>
+                            <a href="http://wordpress.org/extend/plugins/make-it-yours/">Make it Yours</a>
+                          </h5>&nbsp;<span>(<a href="http://www.taxweb.com.br/site/wp-admin/plugin-install.php?tab=plugin-information&amp;plugin=make-it-yours&amp;_wpnonce=0646541ce4&amp;TB_iframe=true&amp;width=600&amp;height=800" class="thickbox" title="Make it Yours">Install</a>)</span>
+                          <p>
+                            Gives you two panels to insert custom CSS and PHP codes, so you can customize your theme.
+                          </p>
+                          <h4>
+                            Recently Updated
+                          </h4>
+                          <h5>
+                            <a href="http://wordpress.org/extend/plugins/waktu-solat-countdown/">Waktu Solat Countdown</a>
+                          </h5>&nbsp;<span>(<a href="http://www.taxweb.com.br/site/wp-admin/plugin-install.php?tab=plugin-information&amp;plugin=waktu-solat-countdown&amp;_wpnonce=b0390d9cf0&amp;TB_iframe=true&amp;width=600&amp;height=800" class="thickbox" title="Waktu Solat Countdown">Install</a>)</span>
+                          <p>
+                            Showing prayer time with countdown
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="postbox-container" style="width:49%;">
+                    <div id="side-sortables" class="meta-box-sortables ui-sortable">
+                      <div id="dashboard_quick_press" class="postbox">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>QuickPress</span>
+                        </h3>
+                        <div class="inside">
+                          <form name="post" action="http://www.taxweb.com.br/site/wp-admin/post.php" method="post" id="quick-press">
+                            <h4 id="quick-post-title">
+                              <label for="title">Title</label>
+                            </h4>
+                            <div class="input-text-wrap">
+                              <input type="text" name="post_title" id="title" tabindex="1" autocomplete="off" value="" />
+                            </div>
+                            <div id="media-buttons" class="hide-if-no-js">
+                              Upload/Insert <a href="http://www.taxweb.com.br/site/wp-admin/media-upload.php?post_id=485&amp;type=image&amp;TB_iframe=1" id="add_image" class="thickbox" title="Add an Image" name="add_image"><img src="./assets/media-button-image.gif" alt="Add an Image" onclick="return false;" /></a><a href="http://www.taxweb.com.br/site/wp-admin/media-upload.php?post_id=485&amp;type=video&amp;TB_iframe=1" id="add_video" class="thickbox" title="Add Video" name="add_video"><img src="./assets/media-button-video.gif" alt="Add Video" onclick="return false;" /></a><a href="http://www.taxweb.com.br/site/wp-admin/media-upload.php?post_id=485&amp;type=audio&amp;TB_iframe=1" id="add_audio" class="thickbox" title="Add Audio" name="add_audio"><img src="./assets/media-button-music.gif" alt="Add Audio" onclick="return false;" /></a><a href="http://www.taxweb.com.br/site/wp-admin/media-upload.php?post_id=485&amp;TB_iframe=1" id="add_media" class="thickbox" title="Add Media" name="add_media"><img src="./assets/media-button-other.gif" alt="Add Media" onclick="return false;" /></a>
+                            </div>
+                            <h4 id="content-label">
+                              <label for="content">Content</label>
+                            </h4>
+                            <div class="textarea-wrap">
+                              <textarea name="content" id="content" class="mceEditor" rows="3" cols="15" tabindex="2">
+</textarea>
+                            </div><script type="text/javascript">
+//<![CDATA[
+                            edCanvas = document.getElementById('content');edInsertContent = null;
+                            //]]>
+                            </script>
+                            <h4>
+                              <label for="tags-input">Tags</label>
+                            </h4>
+                            <div class="input-text-wrap">
+                              <input type="text" name="tags_input" id="tags-input" tabindex="3" value="" />
+                            </div>
+                            <p class="submit">
+                              <input type="hidden" name="action" id="quickpost-action" value="post-quickpress-save" /> <input type="hidden" name="quickpress_post_ID" value="485" /> <input type="hidden" name="post_type" value="post" /> <input type="hidden" id="_wpnonce" name="_wpnonce" value="63768b7fc9" /><input type="hidden" name="_wp_http_referer" value="/site/wp-admin/" /> <input type="submit" name="save" id="save-post" class="button" value="Save Draft" tabindex="4" /> <input type="reset" value="Reset" class="button" /> <span id="publishing-action"><input type="submit" name="publish" id="publish" accesskey="p" tabindex="5" class="button-primary" value="Publish" /> <img class="waiting" src="./assets/wpspin_light.gif" alt="" /></span><br class="clear" />
+                            </p>
+                          </form>
+                        </div>
+                      </div>
+                      <div id="dashboard_recent_drafts" class="postbox">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>Recent Drafts</span>
+                        </h3>
+                        <div class="inside">
+                          There are no drafts at the moment
+                        </div>
+                      </div>
+                      <div id="dashboard_primary" class="postbox">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>WordPress Blog <span class="postbox-title-action"><a href="http://www.taxweb.com.br/site/wp-admin/?edit=dashboard_primary#dashboard_primary" class="edit-box open-box">Configure</a></span></span>
+                        </h3>
+                        <div class="inside" style="">
+                          <div class="rss-widget">
+                            <ul>
+                              <li>
+                                <a class="rsswidget" href="http://wordpress.org/news/2011/10/wordpress-3-3-beta-2/" title="Changes since Beta 1: Updated the Blue theme Fixed IE7 and RTL support Improved flyout menu styling and fixed several glitches Finished the Pointers implementation Landed the dashboard Welcome box for new installs Improved contextual help styling Tweaked the admin bar a little more Fixed a bunch of bugs Consult the full change log &nbsp;for […]">WordPress 3.3 Beta 2</a> <span class="rss-date">20/10/2011</span>
+                                <div class="rssSummary">
+                                  Changes since Beta 1: Updated the Blue theme Fixed IE7 and RTL support Improved flyout menu styling and fixed several glitches Finished the Pointers implementation Landed the dashboard Welcome box for new installs Improved contextual help styling Tweaked the admin bar a little more Fixed a bunch of bugs Consult the full change log &nbsp;for […]
+                                </div>
+                              </li>
+                              <li>
+                                <a class="rsswidget" href="http://wordpress.org/news/2011/10/wordpress-3-3-beta-1/" title="WordPress 3.3 is ready for beta testers. As always, this is software still in development and&nbsp;we don’t recommend that you run it on a production site&nbsp;— set up a test site just to play with the new version. If you break it (find a bug), please report it, and if you’re a developer, try to […]">WordPress 3.3 Beta 1</a> <span class="rss-date">11/10/2011</span>
+                                <div class="rssSummary">
+                                  WordPress 3.3 is ready for beta testers. As always, this is software still in development and&nbsp;we don’t recommend that you run it on a production site&nbsp;— set up a test site just to play with the new version. If you break it (find a bug), please report it, and if you’re a developer, try to […]
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="dashboard_recent_comments" class="postbox" style="display: block;">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>Recent Comments <span class="postbox-title-action"><a href="http://www.taxweb.com.br/site/wp-admin/?edit=dashboard_recent_comments#dashboard_recent_comments" class="edit-box open-box">Configure</a></span></span>
+                        </h3>
+                        <div class="inside">
+                          <p>
+                            No comments yet.
+                          </p>
+                        </div>
+                      </div>
+                      <div id="dashboard_secondary" class="postbox">
+                        <div class="handlediv" title="Click to toggle">
+                          <br />
+                        </div>
+                        <h3 class="hndle">
+                          <span>Other WordPress News <span class="postbox-title-action"><a href="http://www.taxweb.com.br/site/wp-admin/?edit=dashboard_secondary#dashboard_secondary" class="edit-box open-box">Configure</a></span></span>
+                        </h3>
+                        <div class="inside" style="">
+                          <div class="rss-widget">
+                            <ul>
+                              <li>
+                                <a class="rsswidget" href="http://feedproxy.google.com/~r/WordpressTavern/~3/uG-_JFGz8Rw/chip-bennett-working-on-new-template-hierarchy-diagram" title="Chip Bennett is currently in the middle of creating an updated version of the template hierarchy diagram which shows the structure of how a page is displayed. The new diagram is a bit more detailed than the old one. These diagrams are an excellent way to learn about Template Tags in WordPress as well as visually see the process for determining which page is […]">WPTavern: Chip Bennett Working On New Template Hierarchy Diagram</a>
+                              </li>
+                              <li>
+                                <a class="rsswidget" href="http://wordpress.tv/2011/10/26/al-davis-shared-hosting-and-wordpress/" title=" […]">WordPress.tv: Al Davis: Shared Hosting and WordPress</a>
+                              </li>
+                              <li>
+                                <a class="rsswidget" href="http://feedproxy.google.com/~r/WordpressTavern/~3/e-D1x07OUIY/alex-king-releases-post-formats-admin-ui-code" title="Alex King has made available code that creates an admin UI for using Post Formats. While working on their upcoming new theme, FavePersonal, the CrowdFavorite team created an admin interface for post formats that takes advantage of custom fields and replaces the built-in radio button post format selector with tabs across the top of the post editor. Judging by […]">WPTavern: Alex King Releases Post Formats Admin UI Code</a>
+                              </li>
+                              <li>
+                                <a class="rsswidget" href="http://wordpress.tv/2011/10/26/mitch-cantor-custom-post-types-and-you/" title=" […]">WordPress.tv: Mitch Cantor: Custom Post Types and You</a>
+                              </li>
+                              <li>
+                                <a class="rsswidget" href="http://wordpress.tv/2011/10/25/brian-rotsztein-seo-social-media-for-business-with-wordpress/" title=" […]">WordPress.tv: Brian Rotsztein: SEO &amp; Social Media for Business with WordPress</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="postbox-container" style="display:none;width:49%;">
+                    <div id="column3-sortables" class="meta-box-sortables ui-sortable" style=""></div>
+                  </div>
+                  <div class="postbox-container" style="display:none;width:49%;">
+                    <div id="column4-sortables" class="meta-box-sortables ui-sortable" style=""></div>
+                  </div>
+                </div>
+                <form style="display:none" method="get" action="">
+                  <p>
+                    <input type="hidden" id="closedpostboxesnonce" name="closedpostboxesnonce" value="5250f0fbfc" />
+                    <input type="hidden" id="meta-box-order-nonce" name="meta-box-order-nonce" value="7c7e2d5e8c" />
+                  </p>
+                </form>
+                <div class="clear"></div>
+              </div><!-- dashboard-widgets-wrap -->
+            </div><!-- wrap -->
+            <div class="clear"></div>
+          </div><!-- wpbody-content -->
+          <div class="clear"></div>
+        </div><!-- wpbody -->
+        <div class="clear"></div>
+      </div><!-- wpcontent -->
+      
+      <script type="text/javascript" src="./assets/dash_util.js">
+      </script>
+      <!--  <script type="text/javascript" src="./assets/jquery-ui-1.8.15.custom.js"> -->
+      <script type="text/javascript" src="./assets/jquery-ui-1.8.16.custom.js">
+      </script>
+      <script type="text/javascript" src="./assets/jquery-ed.js">
+      </script>
+      <script type="text/javascript" src="./assets/postboxes.js">
+      </script>
+      <script type="text/javascript" src="./assets/jquery-query.js">
+      </script>
+      <div class="clear"></div>
+    </div><!-- wpwrap -->
+    <script type="text/javascript">
+    //<![CDATA[
+    if(typeof wpOnload=='function')wpOnload();
+    //]]>
+    </script>
+  </body>
+</html>
